@@ -1,8 +1,20 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 interface StockPriceBoxProps {
   $direction: boolean;
 }
+
+const pulse = keyframes`
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
 
 export const StockPriceBox = styled.div<StockPriceBoxProps>`
   display: flex;
@@ -29,6 +41,7 @@ export const StockPriceBox = styled.div<StockPriceBoxProps>`
 
     > div:nth-child(2) {
       width: 100%;
+      max-width: 420px;
       height: 220px;
       position: relative;
       border-radius: 20px;
@@ -78,4 +91,23 @@ export const StockPriceBox = styled.div<StockPriceBoxProps>`
       }
     }
   }
+`;
+
+export const LoadingBox = styled.div`
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-family: var(--font-family);
+  line-height: normal;
+  font-style: normal;
+  font-weight: 500;
+  color: #545454;
+  animation: ${pulse} 1.5s infinite;
 `;

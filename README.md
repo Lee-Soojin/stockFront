@@ -7,5 +7,11 @@ SSE를 이용하여 실시간으로 **삼성전자 주가**를 확인해보자.�
 
 기능은 간단하다. 5초 간격으로 받아오는 실시간 삼성전자 시세를 확인할 수 있다. 또한, 전일대비 상승과 하락에 따라 이미지가 변경된다.
 
+**Deployment**  
+Netlify로 배포하였다.
+
+**사용 기술**  
+Next.js , Typescript, Styled-components
+
 https://stock-tracker-sse.netlify.app/
 ![image](https://github.com/user-attachments/assets/158dca90-1fca-461e-92c1-2d0deab16251)

@@ -57,6 +57,7 @@ const StockPrice = () => {
                 : "/images/jaedragon2.png"
             }
             alt="삼성전자"
+            priority
             width={420}
             height={220}
           />

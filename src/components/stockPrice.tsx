@@ -26,7 +26,7 @@ const StockPrice = () => {
     }, 3000);
 
     const eventSource = new EventSource(
-      "teenage-ally-hifen-0062ac70.koyeb.app/stock/005930"
+      `${process.env.NEXT_PUBLIC_API_URL}/stock/005930`
     );
 
     eventSource.onmessage = (event) => {

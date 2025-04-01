@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
 interface StockPriceBoxProps {
-  $direction: boolean;
+  direction: string | null;
 }
 
 const pulse = keyframes`
@@ -86,7 +86,8 @@ export const StockPriceBox = styled.div<StockPriceBoxProps>`
           line-height: normal;
           font-style: normal;
           font-weight: 500;
-          color: ${(props) => (props.$direction ? "#F64E3B" : "#5285FE")};
+          color: ${(props) =>
+            props.direction === "상승" ? "#F64E3B" : "#5285FE"};
         }
       }
     }

@@ -42,7 +42,7 @@ const StockPrice = () => {
   }
 
   return (
-    <StockPriceBox $direction={stock.direction === "상승"}>
+    <StockPriceBox direction={stock.direction}>
       <Head>
         <title>삼성전자 실시간 주가</title>
         <meta name="description" content="삼성전자 실시간 주가" />
@@ -66,7 +66,13 @@ const StockPrice = () => {
         <div className="change">
           전일대비
           <p>
-            <span>{stock.direction === "상승" ? "▲" : "▼"}</span>
+            <span>
+              {stock.direction === "상승"
+                ? "▲"
+                : stock.direction === "하락"
+                ? "▼"
+                : "⎼"}
+            </span>
             {stock.change || 0}
           </p>
         </div>
